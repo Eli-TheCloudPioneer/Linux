@@ -1,0 +1,19 @@
+Tracing the path packets take to reach a specified destination on the internet.
+
+Open Command Prompt (cmd).
+
+tracert google.com
+
+Tracing route to google.com [142.250.XX.XXX]
+over a maximum of 30 hops:
+
+  1     3 ms     3 ms     2 ms  arrisatom [192.XXX.0.1]
+  2    14 ms    13 ms    12 ms  10.135.192.1
+  3    15 ms    13 ms    11 ms  24-233-179-92.miami.fl.bluestreamfiber.net [24.233.179.XX]
+  4    12 ms    13 ms    14 ms  139-138-79-227.miami.fl.bluestreamfiber.net [139.138.79.XXX]
+  5    11 ms    13 ms    13 ms  139-138-74-241.miami.fl.bluestreamfiber.net [139.138.74.XXX]
+  6    12 ms    12 ms    13 ms  142.251.61.XXX
+  7    13 ms    14 ms    14 ms  209.85.244.XXX
+  8    13 ms    14 ms    10 ms  mia09s22-in-f14.1e100.net [142.250.XX.XXX]
+
+Trace complete.
