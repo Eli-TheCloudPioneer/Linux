@@ -1,2 +1,72 @@
 I will be using curl to make web requests. The website I will be using as an example is my current employer website.
 
+curl https://fhiaremodeling.com
+
+I observe the HTML content of the web page returned to my terminal
+
+I then save the output using -o
+
+curl https://fhiaremodeling.com -o fhiaremodeling.html
+
+File succesfully saved and received the following status:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  270k  100  270k    0     0  1102k      0 --:--:-- --:--:-- --:--:-- 1105k
+
+I then locate the file and open to verify for accuracy.
+
+Now I want to analyze HTTP response headers using -I . 
+I will analyze the following headers such as:Content-Type, HTTP/1.1 200 OK, Server, and Content-Length.
+
+curl -I https://fhiaremodeling.com 
+
+RESULTS:
+HTTP/2 200
+server: nginx
+date: Sat, 30 Mar 2024 01:28:24 GMT
+content-type: text/html; charset=UTF-8
+content-length: 277260
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+x-powered-by: WP Engine
+accept-ch: Sec-CH-UA-Mobile
+cloudflare-cdn-cache-control: no-cache
+x-nitro-cache: HIT
+x-nitro-cache-from: drop-in
+x-nitro-rev: b452482
+link: <https://cdn-jjcdb.nitrocdn.com>; rel=preconnect
+link: <https://fhiaremodeling.com/wp-json/>; rel="https://api.w.org/"
+link: <https://fhiaremodeling.com/wp-json/wp/v2/pages/56>; rel="alternate"; type="application/json"
+link: <https://fhiaremodeling.com/>; rel=shortlink
+content-security-policy: upgrade-insecure-requests
+strict-transport-security: max-age=10886400
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+permissions-policy: geolocation=(),midi=(),sync-xhr=(),microphone=(),camera=(),magnetometer=(),gyroscope=(),fullscreen=(self),payment=()
+x-xss-protection: 1; mode=block
+x-cache-ctime: 1711474484
+x-cacheable: SHORT
+vary: Accept-Encoding,Cookie
+cache-control: max-age=600, must-revalidate
+accept-ranges: bytes
+x-cache: HIT: 3
+x-cache-group: normal
+content-security-policy: upgrade-insecure-requests
+
+
+
+****** Common HTTP Status Codes and Their Significance *******
+200 OK:
+
+Meaning: The request was successful, and the server has returned the requested resource.
+Importance: This is the most common code that indicates a successful HTTP request. Verifying that interactions between the client and server are working correctly is crucial.
+404 Not Found:
+
+Meaning: The server cannot find the requested resource. This code is often seen when a URL does not exist on the server.
+Importance: Identifying broken links or incorrect URL references in your application helps maintain a good user experience and SEO ranking.
+301 Moved Permanently:
+
+Meaning: This response code indicates that the requested resource has been permanently moved to a new URL, which is provided by the Location header.
+Importance: This is critical for website maintenance and SEO. It ensures that users and search engines are directed to the correct URL, preserving the site's link equity.
