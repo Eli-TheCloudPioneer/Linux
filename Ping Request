@@ -1,0 +1,15 @@
+I will be running Ping to verify the ability to reach a specific domain or IP address.
+
+
+C:\Users\elibe> ping cloudacademy.com
+
+Pinging cloudacademy.com [13.226.52.25] with 32 bytes of data:
+Reply from 13.226.52.25: bytes=32 time=20ms TTL=250
+Reply from 13.226.52.25: bytes=32 time=33ms TTL=250
+Reply from 13.226.52.25: bytes=32 time=34ms TTL=250
+Reply from 13.226.52.25: bytes=32 time=40ms TTL=250
+
+Ping statistics for 13.226.52.25:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 20ms, Maximum = 40ms, Average = 31ms
